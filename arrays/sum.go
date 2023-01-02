@@ -12,6 +12,10 @@ func Sum(numbers []int) int {
 
 // SumAll icant
 func SumAll(numbersToSum ...[]int) []int {
-
-	return nil
+	var sums []int
+	for _, numbers := range numbersToSum{
+		sums = append(sums, Sum(numbers))
+	}
+	
+	return sums
 }
