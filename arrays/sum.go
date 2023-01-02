@@ -4,8 +4,14 @@ package main
 func Sum(numbers []int) int {
 	sum := 0
 	for _, number := range numbers {
-		sum+= number
+		sum += number
 	}
 
 	return sum
+}
+
+// SumAll icant
+func SumAll(numbersToSum ...[]int) []int {
+
+	return nil
 }

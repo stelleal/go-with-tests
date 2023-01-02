@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 // go test -cover
 
@@ -10,9 +13,18 @@ func TestSum(t *testing.T) {
 
 		got := Sum(numbers)
 		want := 9
-		
+
 		if got != want {
 			t.Errorf("got %d want %d given, %v", got, want, numbers)
 		}
 	})
+}
+
+func TestSumAll(t *testing.T) {
+	got := SumAll([]int{1, 2}, []int{0, 9})
+	want := []int{3, 9}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("got %v want %v", got, want)
+	}
 }
