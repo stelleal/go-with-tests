@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestWallet(t *testing.T) {
 	wallet := Wallet{}
@@ -8,7 +10,6 @@ func TestWallet(t *testing.T) {
 
 	got := wallet.Balance()
 	want := 10
-
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
 	}
